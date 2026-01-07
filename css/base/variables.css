@@ -1,0 +1,23 @@
+:root {
+  --light-color: rgba(238, 255, 251, 1);
+  --dark-color: rgba(7, 45, 36, 1);
+  --primary-color: rgba(17, 191, 149, 1);
+  --secondary-color: rgba(29, 146, 196, 1);
+  --error-color: rgba(255, 0, 0, 1);
+  --text-color: rgba(238, 255, 251, 1);
+  --dark-bg: rgba(2, 6, 23, 1);
+  --light-bg: var(--light-color);
+  --neo-cyan: rgba(0, 243, 255, 1);
+  
+  --neo-shadow: 0 0 10px 2px var(--neo-cyan);
+  
+  --min-padding: 10px;
+  --padding: 20px;
+  --text-size: 1rem;
+  --min-raduis: 1rem;
+  --raduis: 1.5rem;
+  --min-height: 200px;
+  --max-width: 600px;
+  --min-gap: 1rem;
+  --max-gap: 2rem
+}

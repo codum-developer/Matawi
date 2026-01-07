@@ -1,0 +1,15 @@
+@import 'base/reset.css';
+@import 'base/variables.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/images.css';
+@import 'layouts/header.css';
+@import 'layouts/footer.css';
+@import 'layouts/flex.css';
+
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--light-color);
+  font-family: 'Rajdhani', sans-serif;
+}
