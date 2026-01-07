@@ -49,6 +49,7 @@
 .header-logo {
   color: var(--primary-color);
   font-size: 2rem;
+  font-family: "Henny Penny", system-ui;
 }
 
 .header-logo span {
