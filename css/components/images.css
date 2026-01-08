@@ -4,7 +4,7 @@
   height: 100%;
 }
 
-.img{
-  border-top: 2px solid var(--neo-cyan);
-  
+.img:hover{
+  transform: scale(1.02);
+  transition: all linear 1s;
 }

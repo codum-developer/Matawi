@@ -7,7 +7,8 @@
   <title>Matawi | Home</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/pages/home.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
@@ -32,7 +33,105 @@
     </div>
   </header>
   
+  <main>
+    <section class="hero l-grid" id="reception">
+      <div class="flex d-column p-20">
+        <h1 class="underlined">Nous découvrir</h1>
+        <img src="./puplics/image/search.jpg" alt="image illustrant la découverte" class="img" />
+      </div>
+      <div class="p-20">
+        <h3 class="text-left">Tout ce dont vous avez besoin, réuni au même endroit.</h3>
+        <p class="poppins-regular" id="description">
+          Pourquoi multiplier les onglets quand vous pouvez tout avoir sous la main ? De la productivité au divertissement, explorez une collection unique d’outils en ligne performants et de mini-jeux 2D addictifs. Simplifiez votre quotidien, boostez votre efficacité et faites une pause ludique, le tout sur une seule plateforme.</p>
+      </div>
+    </section>
+    
+    <section class="features grid center l-grid" id="">
+      <div class="flex d-column p-20 center">
+        <h1 class="underlined">Nos fonctionnalités</h1>
+        <img src="./puplics/image/feature.png" alt="image représentant le fonctionnalités" class="img" />
+      </div>
+      
+      <div class="p-20">
+        <h3 class="text-left">Nous sommes meilleurs</h3>
+        <p class="poppins-medium">Nous avons réuni tous ce que vous pouvez avoir besoin à un seul endroit !</p>
+        <div class="flex center d-column ">
+          <h2 class="text-center">Commencer à découvrir</h2>
+          <i class="fa fa-arrow-down text-center leap-down"></i>
+        </div>
+        
+        <div class="flex item-center space-evenly p-20 md-gap">
+          <button class="btn btn-bg">Voir plus</button>
+          <button class="btn btn-bd">Contact</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="p-20" id="features">
+      <h2 class="underlined fit-content">Nous avons</h2>
+      
+      <div class="features-content  grid center md-gap left-right">
+        <!-- Section Jeu Vidéo -->
+        <div class="feature-item">
+          <i class="fas fa-gamepad fa-3x"></i>
+          <h3>Gaming</h3>
+          <p>Expérience de jeu immersive</p>
+        </div>
+        
+        <!-- Section IA -->
+        <div class="feature-item">
+          <i class="fas fa-robot fa-3x"></i>
+          <h3>IA</h3>
+          <p>Algorithmes intelligents</p>
+        </div>
+        
+        <!-- Section Audio -->
+        <div class="feature-item">
+          <i class="fas fa-headphones fa-3x"></i>
+          <h3>Lecteur Audio</h3>
+          <p>Son haute qualité</p>
+        </div>
+        
+        <!-- Bouton "Voir plus" -->
+        <div class="more-btn flex item-center space-evenly">
+          <button class="btn btn-bg" id="more-btn">
+            Plus d'options
+          </button>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+    
+    <section class="">
+      <h1 class="underlined fit-content">Nos articles actuelle</h1>
+      <article class="article card-wrapper">
+        <div class="card neo-card p-20">
+          <div class="article-image">
+            <img src="" alt="image de l'article" />
+          </div>
+          
+          <div class="article-detail">
+            <h2 class="article-title poppins-medium">Titre: Kwepa</h2>
+            <p class="poppins-medium">Type: jeux</p>
+            <div class="article-description flex d-column space-between">
+              <h3 class="poppins-medium">Description</h3>
+              <p>
+                Plongez dans un défi d'arcade pur et dur où vos réflexes sont votre seule chance de survie.
+                Dans ce jeu de tir 2D frénétique, vous n'êtes pas le chasseur... vous êtes la cible.
+              </p>
+            </div>
+          </div>
+          <div class="article-buttons flex center space-evenly">
+            <button class="btn btn-bg">Jouer</button>
+            <button class="btn btn-bd">Lire plus</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  
   <script src="./js/utils/dom.js"></script>
+  <script src="./js/page/home.js"></script>
 </body>
 
 </html>

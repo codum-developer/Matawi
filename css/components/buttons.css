@@ -1,22 +1,19 @@
 .btn{
-  background: var(--primary-color);
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  border-radius: var(--min-raduis);
   padding: var(--min-padding);
   width: 90%;
   position: relative;
 }
-
-.btn::after{
-  content: "";
-  background: var(--secondary-color);
-  width: 50px;
-  height: 100px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 2px;
+.btn-bg{
+  background: var(--primary-color);
+}
+.btn-bd{
+  border: 2px double var(--primary-color);
 }
 
 .btn:active{
   background: var(--secondary-color);
+}
+.neo-btn{
+  box-shadow: 0 0 10px var(--neo-cyan);
 }

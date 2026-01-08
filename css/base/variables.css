@@ -8,6 +8,7 @@
   --dark-bg: rgba(2, 6, 23, 1);
   --light-bg: var(--light-color);
   --neo-cyan: rgba(0, 243, 255, 1);
+  --grey-color: rgba(151, 152, 158, 1);
   
   --neo-shadow: 0 0 10px 2px var(--neo-cyan);
   
