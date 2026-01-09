@@ -17,3 +17,7 @@
 .neo-btn{
   box-shadow: 0 0 10px var(--neo-cyan);
 }
+
+.btn-neo{
+  box-shadow: 0 0 10px var(--primary-color);
+}

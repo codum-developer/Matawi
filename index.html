@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="pageHead">
     <div class="header-container">
       <a href="./index.html" class="header-logo-container flex center">
         <p class="header-logo">MAT<span>AWI</span></p>
@@ -33,7 +33,7 @@
     </div>
   </header>
   
-  <main>
+  <main id="mainContent">
     <section class="hero l-grid" id="reception">
       <div class="flex d-column p-20">
         <h1 class="underlined">Nous découvrir</h1>
@@ -57,7 +57,7 @@
         <p class="poppins-medium">Nous avons réuni tous ce que vous pouvez avoir besoin à un seul endroit !</p>
         <div class="flex center d-column ">
           <h2 class="text-center">Commencer à découvrir</h2>
-          <i class="fa fa-arrow-down text-center leap-down"></i>
+          <i class="fa fa-arrow-down text-center leap-down f-size-40"></i>
         </div>
         
         <div class="flex item-center space-evenly p-20 md-gap">
@@ -97,7 +97,7 @@
           <button class="btn btn-bg" id="more-btn">
             Plus d'options
           </button>
-          <i class="fas fa-arrow-right"></i>
+          <i class="fas fa-arrow-right leap-right"></i>
         </div>
       </div>
     </section>
@@ -129,6 +129,91 @@
       </article>
     </section>
   </main>
+  
+  
+  <div class="review-btn flex center d-column">
+    <i class="fas fa-arrow-up f-size-40 leap-up"></i>
+    <button class="btn btn-neo btn-bg" id="reviewBtn">Revoir</button>
+  </div>
+  
+  
+  <footer class="page-footer" id="pageFooter">
+    <div class="bg-element"></div>
+    <div class="page-footer-content p-20">
+      
+      <div class="flex space-between">
+        <div class="project-logo">
+          <h3>Logo du projet</h3>
+          <div class="logo">
+            <img src="./puplics/image/matawiLogo.png" alt="logo du projet" />
+          </div>
+        </div>
+        <div class="">
+          <h3>Notice</h3>
+          <p>Ce gogo appartient à ce projet il est interdit de l'utiliser dans d'autres projets</p>
+        </div>
+      </div>
+      
+      <div class="flex space-between">
+        <nav class="quick-navigation">
+          <h3 class="">Liens rapide</h3>
+          <ul class="footer-link p-20">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./pages/about.html">À-propos</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="./pages/product.html">Produits</a></li>
+          </ul>
+        </nav>
+        
+        <div class="">
+          <h3>fonctionnalités</h3>
+          <p>Game</p>
+          <p>IA</p>
+          <p>Music</p>
+          <p>Et plus</p>
+        </div>
+      </div>
+      
+      
+      <div class="social-media">
+        <h3>Nos réseau</h3>
+        
+        <ul class="social-link flex space-evenly item-center">
+          <li class="facebook-item btn-bg">
+            <a class="facebook-link" href="#">
+              <i class="fab fa-facebook-f"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+          
+          <li class="whatsapp-item btn-bg">
+            <a class="whatsapp-link" href="#">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </li>
+          
+          <li class="github-item btn-bg">
+            <a class="github-link" href="#">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+        
+        
+      </div>
+      
+      <div class="info flex d-column center p-20 text-center">
+        <p>Créer par MURHABAZI BISIMWA ALAIN</p>
+        <p>RDC Sud-kivu - Bukavu - kadutu - cimpunda - Av. Makasi</p>
+        <div class="copyright">
+          <p>&COPY; 2026 - MATAWI Project all rights reserved</p>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
   
   <script src="./js/utils/dom.js"></script>
   <script src="./js/page/home.js"></script>

@@ -1,0 +1,58 @@
+.page-footer {
+  position: relative;
+  color: var(--text-color);
+  margin-top: 2rem;
+  min-height: 50vh;
+  background: var(--grey-color);
+  overflow: visible;
+}
+
+.review-btn {
+  height: 150px;
+  width: 100%;
+  
+}
+
+.bg-element {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-color);
+  pointer-events: none;
+}
+
+.page-footer-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr auto auto;
+  
+}
+
+.page-footer-content * {
+  z-index: 3;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.quick-navigation {
+  width: 100%;
+}
+
+.quick-navigation h3 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.social-link li {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.social-link li i {
+  font-size: 24px;
+}

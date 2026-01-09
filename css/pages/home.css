@@ -33,12 +33,8 @@ i {
   max-width: 150px;
 }
 
-.features .fa-arrow-down {
-  font-size: 50px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  padding: 10px;
-  
+.features .fa-arrow-down{
+  padding-bottom: 20px;
 }
 
 .features>* {
@@ -67,6 +63,11 @@ i {
   align-items: center;
   text-align: center;
   width: 262px;
+}
+
+.feature-item h3{
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 .feature-item:hover{
   transform: skewX(2deg);

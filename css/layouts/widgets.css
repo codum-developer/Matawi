@@ -39,6 +39,9 @@ div{
 .grid{
   display: grid;
 }
+.grid-center{
+  place-items: center;
+}
 .left-right > *:nth-child(odd){
   justify-self: start;
 
@@ -61,13 +64,39 @@ div{
 .leap-down{
   animation: leap-down 1s linear infinite;
 }
+.leap-up{
+  animation: leap-up 1s linear infinite;
+}
+.leap-right{
+  animation: leap-right 1s linear infinite;
+}
+.leap-left{
+  animation: leap-left 1s linear i infinite;
+}
+
+
+
 
 @keyframes leap-down{
-  from{
-    transform: translateY(0);
-  }
   to{
-    transform: translateY(-20px) rotate(20deg);
-    transform-origin: top;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes leap-up{
+  to{
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes leap-left{
+  to{
+    transform: translateX(20px);
+  }
+}
+
+@keyframes leap-right{
+  to{
+    transform: translateX(-20px);
   }
 }
