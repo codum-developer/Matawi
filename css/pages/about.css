@@ -1,0 +1,34 @@
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.about-item {
+  height: 100%;
+  
+}
+
+.about-me-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.code-source-link {
+  height: 150px;
+  overflow: hidden;
+}
+
+.my-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px double var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.project-objectives ul li {
+  margin-bottom: 20px;
+}

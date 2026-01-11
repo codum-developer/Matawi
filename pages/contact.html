@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Matawi | Contact</title>
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script src="../js/utils/dom.js"></script>
 </head>
 
 <body>
@@ -31,7 +34,71 @@
     </div>
   </header>
   
-  <script src="../js/utils/dom.js"></script>
+  <main class="contact p-20">
+    <section id="contact">
+      <div class="container">
+        <h2 class="underlined">Contactez-nous</h2>
+        <p>Vous avez un projet similaire ou souhaitez en savoir plus sur cette réalisation ? N'hésitez pas à nous contacter.</p>
+        
+        <div class="contact-container flex d-column">
+          <div class="contact-info">
+            <h3>Informations de contact</h3>
+            <p><i class="fas fa-map-marker-alt"></i>   RDC - sud-kivu - Bukavu</p>
+            <a href="tel:+243 976905269"><i class="fas fa-phone"></i>   +243 976905269</a>
+            <a href="mailto:alainmurhabazi21@gmail.com"><i class="fas fa-envelope"></i> alainmurhabazi21@gmail.com</a>
+            <p><i class="fas fa-clock"></i>   Lun-Ven: 9h-18h</p>
+            
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin-in"></i>   Linkedin</a>
+              <a href="https://www.facebook.com/alain.murhabazi.2025"><i class="fab fa-facebook-f"></i>   Facebook</a>
+              <a href="https://github.com/codum-developer"><i class="fab fa-github"></i>   GitHub</a>
+            </div>
+          </div>
+          
+          
+          <div class="for-developer">
+            <h2 class="underlined">Tu est un développeur ?</h2>
+            <div class="flex d-column center text-center">
+              <p>Voir le code sur GitHub</p>
+              <i class="fa fa-arrow-down leap-down f-size-40"></i>
+              <br /> <br />
+              <a class="github-link btn-bg btn" href="">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form flex d-column p-20 center">
+            <h3>Envoyez-nous un message</h3>
+            <form id="contactForm" class="flex d-column center">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-bg">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <br />
+  <br />
+  
+  
 </body>
 
 </html>

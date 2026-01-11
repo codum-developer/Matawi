@@ -21,3 +21,7 @@
 .btn-neo{
   box-shadow: 0 0 10px var(--primary-color);
 }
+.review-btn{
+  max-width: 500px;
+  margin: 0 auto;
+}

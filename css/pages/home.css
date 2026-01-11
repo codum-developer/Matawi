@@ -14,6 +14,7 @@ i {
   font-size: 1.2rem;
 }
 
+/*section feature*/
 
 .features {
   min-height: 100vh;
@@ -33,7 +34,7 @@ i {
   max-width: 150px;
 }
 
-.features .fa-arrow-down{
+.features .fa-arrow-down {
   padding-bottom: 20px;
 }
 
@@ -65,47 +66,30 @@ i {
   width: 262px;
 }
 
-.feature-item h3{
+.feature-item h3 {
   margin-bottom: 0;
   padding-bottom: 10px;
 }
-.feature-item:hover{
+
+.feature-item:hover {
   transform: skewX(2deg);
   box-shadow: var(--neo-shadow);
 }
 
-.more-btn {
-  height: 100px;
-  width: 250px;
-}
-
-.more-btn .fa-arrow-right {
-  font-size: 50px;
-}
-
-.more-btn button {
-  max-width: 150px;
-}
 
 
-.article-description h3{
-  margin: 0;
-  margin-top: 1rem;
-}
-.article-buttons button{
-  width: clamp(100px, 150px, 200px);
-}
-.article-image{
-  width: 100%;
-  height: 300px;
-  background: var(--grey-color);
-  border-radius: var(--raduis);
-  overflow: hidden;
-}
-
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .features {
     min-height: auto;
     direction: rtl;
   }
+}
+
+
+/*bouton err*/
+
+.err-message{
+  color: var(--error-color);
+  background: var(--light-color);
+  padding: 20px;
 }

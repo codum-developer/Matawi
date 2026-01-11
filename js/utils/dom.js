@@ -1,21 +1,51 @@
 class UtilFunction {
-	constructor() {
-		
-	}
-	toggleActiveClass(element) {
-		element.classList.toggle("active")
-	}
-	goUp() {
-		window.scrollTo(0, 0)
-	}
+  constructor() {
+    
+  }
+  toggleActiveClass(element) {
+    element.classList.toggle("active")
+  }
+  goUp() {
+    window.scrollTo(0, 0)
+  }
 }
+
+const util = new UtilFunction()
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  writePageFooter()
+  navBarManager()
+  
+  
+  //Événements 
+  const reviewButton = document.getElementById("reviewBtn")
+  if (reviewButton) {
+    reviewButton.addEventListener("click", util.goUp)
+  } 
+  
+  const detail = document.querySelector(".datail")
+  const summary = document.querySelector(".summary")
+  
+  if (detail && summary) {
+    summary.addEventListener("click", () => {
+      detail.classList.toggle("open")
+    })
+  }
+  
+  
+  //close	
+})
+
+
+
 
 
 
 function writePageHeader() {
-	const headerContent = `
+  const headerContent = `
 		<div class="header-container">
-      <a href="./index.html" class="header-logo-container flex center">
+      <a href="../index.html" class="header-logo-container flex center">
         <p class="header-logo">MAT<span>AWI</span></p>
       </a>
       <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -25,40 +55,40 @@ function writePageHeader() {
       <nav class="header-nav-bar" id="navBar">
         <ul class="header-nemu">
           <li class="active"><a href="./index.html">Accueil</a></li>
-          <li><a href="./pages/about.html">À-propos</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
-          <li><a href="./pages/product.html">Produits</a></li>
+          <li><a href="../pages/about.html">À-propos</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/product.html">Produits</a></li>
         </ul>
       </nav>
       
     </div>
 									
 					`
-	
-	const pageHead = document.getElementById("pageHead")
-	if (pageHead) {
-		return
-	} else {
-		const header = document.createElement("header")
-		header.classList.add("header")
-		header.id = "pageHead"
-		header.innerHTML = headerContent
-		const mainContent = document.getElementById("mainContent")
-		if (mainContent) {
-			document.body.insertBefore(header, mainContent)
-		}
-		
-	}
+  
+  const pageHead = document.getElementById("pageHead")
+  if (pageHead) {
+    return
+  } else {
+    const header = document.createElement("header")
+    header.classList.add("header")
+    header.id = "pageHead"
+    header.innerHTML = headerContent
+    const mainContent = document.getElementById("mainContent")
+    if (mainContent) {
+      document.body.insertBefore(header, mainContent)
+    }
+    
+  }
 }
 
 
 
 function writePageFooter() {
-	const reviewBtnCont = `
+  const reviewBtnCont = `
     <i class="fas fa-arrow-up f-size-40 leap-up"></i>
     <button class="btn btn-neo btn-bg" id="reviewBtn">Revoir</button>
 					`
-	const footerContent = `
+  const footerContent = `
     <div class="bg-element"></div>
     <div class="page-footer-content p-20">
       
@@ -66,7 +96,7 @@ function writePageFooter() {
         <div class="project-logo">
           <h3>Logo du projet</h3>
           <div class="logo">
-            <img src="./puplics/image/matawiLogo.png" alt="logo du projet" />
+            <img src="https://i.postimg.cc/zGN6fMH7/matawi-Logo.png" alt="logo du projet" />
           </div>
         </div>
         <div class="">
@@ -79,10 +109,10 @@ function writePageFooter() {
         <nav class="quick-navigation">
           <h3 class="">Liens rapide</h3>
           <ul class="footer-link p-20">
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./pages/about.html">À-propos</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
-            <li><a href="./pages/product.html">Produits</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../pages/about.html">À-propos</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/product.html">Produits</a></li>
           </ul>
         </nav>
         
@@ -115,7 +145,7 @@ function writePageFooter() {
           </li>
           
           <li class="github-item btn-bg">
-            <a class="github-link" href="#">
+            <a class="github-link" href="https://github.com/codum-developer">
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
@@ -137,60 +167,43 @@ function writePageFooter() {
   
 					
 					`
-	
-	const pageFooter = document.getElementById("pageFooter")
-	if (pageFooter) {
-		return
-	} else {
-		const footerElement = document.createElement("footer")
-		footerElement.classList.add('page-footer')
-		footerElement.id = "pageFooter"
-		footerElement.innerHTML = footerContent
-		
-		
-		const reviewBtn = document.createElement("div")
-		reviewBtn.classList.add("review-btn", "flex", "d-column")
-		reviewBtn.innerHTML = reviewBtnCont
-		
-		document.body.appendChild(reviewBtn)
-		document.body.appendChild(footerElement)
-	}
+  
+  const pageFooter = document.getElementById("pageFooter")
+  if (pageFooter) {
+    return
+  } else {
+    const footerElement = document.createElement("footer")
+    footerElement.classList.add('page-footer')
+    footerElement.id = "pageFooter"
+    footerElement.innerHTML = footerContent
+    
+    
+    const reviewBtn = document.createElement("div")
+    reviewBtn.classList.add("review-btn", "flex", "d-column", "center")
+    reviewBtn.innerHTML = reviewBtnCont
+    
+    document.body.appendChild(reviewBtn)
+    document.body.appendChild(footerElement)
+  }
 }
 
 
 
 function navBarManager() {
-	const mobileMenuButton = document.getElementById("mobileMenuBtn")
-	const navBar = document.getElementById("navBar")
-	const indicatorIcon = document.getElementById("indicatorIcon")
-	if (mobileMenuButton) {
-		mobileMenuButton.addEventListener("click", () => {
-			util.toggleActiveClass(navBar)
-			if (navBar.classList.contains("active")) {
-				indicatorIcon.classList.replace("fa-bars", "fa-times")
-			} else {
-				indicatorIcon.classList.replace("fa-times", "fa-bars")
-			}
-		})
-	}
+  const mobileMenuButton = document.getElementById("mobileMenuBtn")
+  const navBar = document.getElementById("navBar")
+  const indicatorIcon = document.getElementById("indicatorIcon")
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener("click", () => {
+      util.toggleActiveClass(navBar)
+      if (navBar.classList.contains("active")) {
+        indicatorIcon.classList.replace("fa-bars", "fa-times")
+      } else {
+        indicatorIcon.classList.replace("fa-times", "fa-bars")
+      }
+    })
+  }
 }
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-	const util = new UtilFunction()
-	writePageHeader()
-	writePageFooter()
-	navBarManager()
-	
-	
-	
-	//Événements 
-	const reviewButton = document.getElementById("reviewBtn")
-	if (reviewButton) {
-		reviewButton.addEventListener("click", util.goUp)
-	}
-	
-	
-	//close	
-})

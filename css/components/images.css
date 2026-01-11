@@ -8,3 +8,7 @@
   transform: scale(1.02);
   transition: all linear 1s;
 }
+
+.img-contain{
+  object-fit: contain;
+}

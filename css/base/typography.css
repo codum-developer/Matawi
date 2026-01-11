@@ -1,7 +1,9 @@
 h1, h2,h3,h4, h5, h6{
   position: relative;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: .5rem;
+  padding-bottom: .9rem;
+  margin-top: 1rem;
+  width: fit-content;
 }
 p{
   font-size: 1.2rem;
@@ -125,6 +127,11 @@ p{
 .p-20{
   padding: 20px;
 }
+@media (min-width: 900px) {
+  .p-20 {
+    padding: 40px;
+  }
+}
 .text-center{
   text-align: center;
 }
@@ -132,17 +139,19 @@ p{
   text-align: left;
 }
 h1{
-  font-size: clamp(2rem, 3rem, 8vw);
+  font-size: clamp(1rem, 2rem, 8vw);
   margin-bottom: 1rem;
 }
 .f-size-40{
   font-size: 40px;
 }
-
+.w-100{
+  width: 100%;
+}
 .underlined::before{
   content: "";
   width: 40%;
-  height: 5px;
+  height: 4px;
   background: var(--primary-color);
   position: absolute;
   bottom: 0;

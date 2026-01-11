@@ -1,0 +1,32 @@
+.search-form{
+  gap: 20px;
+  height: 200px;
+  max-width: 500px;
+}
+
+
+.search-bar{
+  position: relative;
+  flex-grow: 1;
+}
+.search-bar input{
+  border: 2px solid var(--light-color);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.sub-search-btn{
+  position: absolute;
+  top: 45px;
+}
+.filter{
+  padding-left: 10px;
+  width: 150px;
+}
+.filter select{
+  border: 2px solid var(--light-color);
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+}
