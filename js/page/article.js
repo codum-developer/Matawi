@@ -17,6 +17,7 @@ async function loadData(dataSrc) {
 
 
 function organizeData(results, articleSection, filter) {
+  articleSection.innerHTML = ""
   const data = results.articles
   const datalen = data.length
   let articlelen = 3
@@ -29,36 +30,45 @@ function organizeData(results, articleSection, filter) {
   }
   const articleItems = {}
   if (filter) {
-    for (let i = 0; i < datalen; i++) {
-      if (data[i].type === filter.filter) {
-        articleItems.title = data[i].name
-        articleItems.type = data[i].type
-        articleItems.action = data[i].action
-        articleItems.longDescription = data[i].longDescription
-        articleItems.shortDescription = data[i].shortDescription
-        articleItems.imageSrc = data[i].src.imageSrc
-        articleItems.articlesrc = data[i].src.articleSrc
-        displayArticle(articleItems, articleSection)
-      } else {
-        continue
+    if (filter.filter === "none") {
+      normalData(data, articlelen, articleSection)
+    } else {
+      console.log("il y a de filtre")
+      for (let i = 0; i < datalen; i++) {
+        if (data[i].type === filter.filter) {
+          articleItems.title = data[i].name
+          articleItems.type = data[i].type
+          articleItems.action = data[i].action
+          articleItems.longDescription = data[i].longDescription
+          articleItems.shortDescription = data[i].shortDescription
+          articleItems.imageSrc = data[i].src.imageSrc
+          articleItems.articlesrc = data[i].src.articleSrc
+          displayArticle(articleItems, articleSection)
+        } else {
+          continue
+        }
       }
     }
   }
   else {
-    for (let i = 0; i < articlelen; i++) {
-      articleItems.title = data[i].name
-      articleItems.type = data[i].type
-      articleItems.action = data[i].action
-      articleItems.longDescription = data[i].longDescription
-      articleItems.shortDescription = data[i].shortDescription
-      articleItems.imageSrc = data[i].src.imageSrc
-      articleItems.articlesrc = data[i].src.articleSrc
-      displayArticle(articleItems, articleSection)
-    }
+    normalData(data, articlelen, articleSection)
   }
   
 }
 
+function normalData(data, articlelen, articleSection) {
+  const articleItems = {}
+  for (let i = 0; i < articlelen; i++) {
+    articleItems.title = data[i].name
+    articleItems.type = data[i].type
+    articleItems.action = data[i].action
+    articleItems.longDescription = data[i].longDescription
+    articleItems.shortDescription = data[i].shortDescription
+    articleItems.imageSrc = data[i].src.imageSrc
+    articleItems.articlesrc = data[i].src.articleSrc
+    displayArticle(articleItems, articleSection)
+  }
+}
 
 function displayArticle(content, articleSection) {
   const article = content
@@ -95,6 +105,7 @@ function displayArticle(content, articleSection) {
   articleTag.classList.add("article", "card-wrapper")
   articleTag.id = "article"
   articleTag.innerHTML = articleContent
+  
   articleSection.appendChild(articleTag)
   
   
@@ -114,6 +125,7 @@ function search() {
       e.preventDefault()
       formData.keyWord = document.getElementById("searchBar").value
       formData.filter = document.getElementById("filter").value
+      
       loadData("/data/articles.json")
         .then(data => {
           organizeData(data, sectionArticle, formData)

@@ -18,7 +18,12 @@
 
 .sub-search-btn{
   position: absolute;
-  top: 45px;
+  top: 38px;
+  right: 2px;
+  color: var(--light-color);
+  background: var(--primary-color);
+  padding: 10px;
+  border-radius: 5px;
 }
 .filter{
   padding-left: 10px;
