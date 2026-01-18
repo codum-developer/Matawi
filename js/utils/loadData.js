@@ -1,7 +1,68 @@
-const DATA_SRC = "/data/articles.json"
+export default class LoadData {
+  constructor(dataSrc, filter) {
+    this.src = dataSrc
+    this.filter = filter
+    return this.load(this.src)
+  }
+  
+  async load(dataSrc) {
+    let filter = false
+    let result;
+    let filtered_data;
+     
+    try {
+      const response = await fetch(dataSrc)
+      if (!response.ok) {
+        throw new Error("erreur du status")
+      }
+      else {
+        result = await response.json()
+        if (this.filter) {
+          filtered_data = this.filterdata(result)
+          if (filtered_data != {}) { filter = true }
+        }
+      }
+      
+      if (filter) {
+       return filtered_data 
+      } else {
+        return result
+      }
+      
+    } catch (e) {
+      throw e
+    }
+  }
+  
+  filterdata(dataR) {
+    let filteredData = {}
+    const data = dataR.articles
+    const keyWord = this.filter.keyWord
+    const type = this.filter.type
+    const filterList = [keyWord, type]
+    const applyFilter = filterList.filter(filter => filter != "")
+    console.log(applyFilter)
+    
+    for (let i = 0; i < applyFilter.length; i++) {
+      for (let index = 0; index < data.length; index++) {
+        if (data[index].name === applyFilter[i] || data[index].type === applyFilter[i]) {
+          filteredData = { ...data[index] }
+          
+        }
+        continue
+      }
+    }
+    return filteredData
+  }
+  
+}
+
+
+/*
+export const DATA_SRC = "/data/articles.json"
 const sectionArticle = document.getElementById("sectionArticle")
 
-async function loadData(dataSrc) {
+export async function loadData(dataSrc) {
   try {
     const response = await fetch(dataSrc)
     if (!response.ok) {
@@ -16,7 +77,7 @@ async function loadData(dataSrc) {
 }
 
 
-function organizeData(results, articleSection, filter) {
+export function organizeData(results, articleSection, filter) {
   articleSection.innerHTML = ""
   const data = results.articles
   const datalen = data.length
@@ -56,7 +117,7 @@ function organizeData(results, articleSection, filter) {
   
 }
 
-function normalData(data, articlelen, articleSection) {
+export function normalData(data, articlelen, articleSection) {
   const articleItems = {}
   for (let i = 0; i < articlelen; i++) {
     articleItems.title = data[i].name
@@ -70,7 +131,7 @@ function normalData(data, articlelen, articleSection) {
   }
 }
 
-function displayArticle(content, articleSection) {
+export function displayArticle(content, articleSection) {
   const article = content
   const articleContent = `
         <div class="card neo-card">
@@ -159,3 +220,5 @@ if (sectionArticle) {
 
 
 search()
+
+*/
