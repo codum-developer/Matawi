@@ -1,78 +1,104 @@
-/*section article*/
-.articleSection{
+/* Grille de cartes responsive */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Style de la Carte */
+.card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--neo-cyan);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image et Badge */
+.card-image {
+  position: relative;
+  height: 250px;
+  background-image: url(/puplics/image/matawiLogo.png);
+  background-size: cover;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garde les proportions sans déformer */
+}
+
+.badge-type {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Contenu de la carte */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pousse les boutons vers le bas */
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+/* Boutons */
+.card-actions {
+  margin-top: auto; /* Aligne les boutons en bas même si le texte est court */
+  display: flex;
   gap: 10px;
 }
 
-.articleSection .article{
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-.articleSection .card{
+.btn-primary, .btn-secondary {
+  flex: 1; /* Les deux boutons prennent la même largeur */
+  text-align: center;
   padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
-.article-description h3 {
-  margin: 0;
-  margin-top: 1rem;
+.btn-primary {
+  background: var(--primary-color);
 }
 
-.article-buttons button {
-  width: clamp(100px, 150px, 200px);
+.btn-secondary {
+  background: transparent;
 }
 
-.article-image {
-  width: 100%;
-  height: 350px;
-  background: var(--grey-color);
-  border-radius: var(--raduis);
-  overflow: hidden;
+.btn-primary:hover, .btn-secondary:hover {
+  opacity: 0.8;
 }
-
-.more-btn {
-  height: 100px;
-  width: 250px;
-}
-
-.more-btn .fa-arrow-right {
-  font-size: 50px;
-}
-
-.more-btn button {
-  max-width: 150px;
-}
-
-
-@media (min-width: 700px) {
-  .articleSection h1 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 4;
-  }
-  
-  .article-description {
-    height: 200px;
-    overflow: hidden;
-  }
-  
-  .article-description p {
-    flex-grow: 1;
-  }
-  
-  .articleSection {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-}
-
-@media (min-width: 1000px){
-  .articleSection{
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-  }
-  .articleSection h1 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 5;
-  }
-}
-
