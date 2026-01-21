@@ -1,0 +1,28 @@
+.datail {
+  background: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all .7s ease;
+  display: grid;
+  grid-template-rows: 60px 0fr;
+  
+}
+
+.summary {
+  position: relative;
+  background: var(--primary-color);
+  line-height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+.summary:hover {
+  background: var(--secondary-color);
+}
+
+.open {
+  grid-template-rows: 60px 1fr;
+}

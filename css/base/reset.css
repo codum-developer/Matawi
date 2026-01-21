@@ -4,11 +4,12 @@
   -moz-box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html{
   scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 body{

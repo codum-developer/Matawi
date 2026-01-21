@@ -2,77 +2,62 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Matawi | produits</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pages/produits.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <script src="../js/utils/dom.js"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Matawi | produits</title>
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/pages/produits.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 
-<body>
-  <header class="header">
-    <div class="header-container">
-      <a href="../index.html" class="header-logo-container flex center">
-        <p class="header-logo">MAT<span>AWI</span></p>
-      </a>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars" id="indicatorIcon"></i>
-      </button>
+<body data-range="3">
+   <header class="header" id="pageHead">
       
-      <nav class="header-nav-bar" id="navBar">
-        <ul class="header-nemu">
-          <li><a href="../index.html">Accueil</a></li>
-          <li><a href="../pages/about.html">À-propos</a></li>
-          <li><a href="../pages/contact.html">Contact</a></li>
-          <li class="active"><a href="../pages/product.html">Produits</a></li>
-        </ul>
-      </nav>
-      
-    </div>
-  </header>
-  
-  <main class="">
-    <div class="p-20">
-      <h1 class="underlined">Produits</h1>
-      <h3>Vous êtes sur notre espace produits</h3>
-      <p>Vous pouvez Scroller jusqu'à trouves ce que vous cherchez ou simplement faire un mini recherche trié ou non.</p>
-    </div>
-    
-    <div class="p-20">
-      <form accept-charset="utf-8" class="search-form flex space-between item-center" id="searchForm">
-        <div class="search-bar">
-          <p>Rechercher un article</p>
-          <input type="search" name="search-bar" id="searchBar" placeholder="la recherche ne pas valide" disabled>
-          <button type="submit" class="sub-search-btn">Valider</button>
-        </div>
-        
-        <div class="filter">
-          <p for="filter">filter</p>
-          <select name="" id="filter">
-            <option value="">none</option>
-            <option value="Jeux">jeux</option>
-            <option value="Outil">outil</option>
-          </select>
-        </div>
-      </form>
-      
-    </div>
-    
-    <section class="p-20" id="">
-      <h1 class="underlined">Nos produits</h1>
-      <div id="features-grid" class="features-grid">
-        
+   </header>
+   
+   <main class="" id="main-content">
+      <div class="p-20">
+         <h1 class="underlined">Produits</h1>
+         <h3>Vous êtes sur notre espace produits</h3>
+         <p>Vous pouvez Scroller jusqu'à trouves ce que vous cherchez ou simplement faire un mini recherche trié ou non.</p>
       </div>
-    </section>
-    
-  </main>
-  
-  <script src="../js/utils/loadData.js" type="module"></script>
-  <script src="../js/utils/render.js" type="module"></script>
-  <script src="../js/page/produit.js" type="module"></script>
+      
+      <div class="p-20">
+         <form accept-charset="utf-8" class="search-form flex space-between item-center" id="searchForm">
+            <div class="search-bar">
+               <p>Rechercher un article</p>
+               <input type="search" name="search-bar" id="searchBar" placeholder="la recherche ne pas valide" disabled>
+               <button type="submit" class="sub-search-btn">Valider</button>
+            </div>
+            
+            <div class="filter">
+               <p for="filter">filter</p>
+               <select name="" id="filter">
+                  <option value="">none</option>
+                  <option value="Jeux">jeux</option>
+                  <option value="Outil">outil</option>
+               </select>
+            </div>
+         </form>
+         
+      </div>
+      
+      <section class="p-20" id="" name="section-article">
+         <h1 class="underlined">Nos produits</h1>
+         <div id="features-grid" class="features-grid">
+            
+         </div>
+      </section>
+   </main>
+   
+   <footer id="pageFooter" class="page-footer">
+      
+   </footer>
+   
+   <script src="../js/main.js" type="module" charset="utf-8"></script>
+   <script src="../js/page/produit.js" type="module"></script>
 </body>
 
 </html>
+

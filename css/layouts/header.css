@@ -25,7 +25,7 @@
   
 }
 
-.header-nemu {
+.header-menu {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -34,11 +34,11 @@
   height: 100%;
 }
 
-.header-nemu li {
+.header-menu li {
   padding: 20px 0;
 }
 
-.header-nemu li a {
+.header-menu li a {
   display: block;
 }
 
@@ -90,7 +90,7 @@
     padding: 0;
   }
   
-  .header-nemu {
+  .header-menu {
     background: transparent;
     display: flex;
     justify-content: space-evenly;

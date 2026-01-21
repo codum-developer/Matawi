@@ -127,9 +127,15 @@ p{
 .p-20{
   padding: 20px;
 }
+.p-10{
+  padding: 10px;
+}
 @media (min-width: 900px) {
   .p-20 {
     padding: 40px;
+  }
+  .p-10{
+    padding: 20px;
   }
 }
 .text-center{
