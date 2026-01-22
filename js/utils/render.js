@@ -1,3 +1,6 @@
+import Dom from '/js/utils/dom.js';
+const myDom = new Dom()
+
 export default class Rander {
   constructor() {
     this.body = document.body
@@ -178,8 +181,14 @@ export default class Rander {
     
   }
   
-  randerModal(article) {
+  async randerModal(article) {
+    if (article.longDescription != "") {
+      const description = await myDom.getLongDescription(article.longDescription)
+      article.longDescription = description
+    }
+    
     const longDescription = article.longDescription == "" ? article.shortDescription : article.longDescription
+    
     const modalContent = `
         <div class="modal flex center d-column p-20">
           <button class="close-modal">&times;</button>
@@ -187,7 +196,7 @@ export default class Rander {
           <br />
           <div class="modal-content">
             <div class="modal-images ">
-              <div class="images-wrap flex">
+              <div class="images-wrap flex id="images-wrap">
    
               </div>
             </div>
@@ -197,7 +206,9 @@ export default class Rander {
               <p><strong>Un ${article.type}</strong></p>
               <h3>Description</h3>
               <p>
-              ${longDescription}
+              
+                ${longDescription}
+              
               </p>
             </div>
           </div>
@@ -221,6 +232,10 @@ export default class Rander {
     setTimeout(() => {
       modalWrap.classList.add("visible")
     }, 10)
+    
+    const imageWrap = document.querySelector(".images-wrap")
+    myDom.carousel(imageWrap, 3000)
+    
     
     document.querySelector(".close-modal").addEventListener("click", (e) => {
       e.preventDefault()

@@ -31,6 +31,7 @@ export default class Dom {
     if (detail && summary) {
       summary.addEventListener("click", () => {
         detail.classList.toggle("open")
+        console.log("summary cliquez")
       })
     }
   }
@@ -42,15 +43,23 @@ export default class Dom {
     }
   }
   
-  carousel(){
-    const container = document.querySelector(".modal-images")
-    const imageWrap = document.querySelector(".images-wrap")
-    const imageCount = imageWrap.childElementCount
-    
-    setInterval(()=>{
+  carousel(imageContainer, timeAout = 3000) {
+    const elementCount = imageContainer.childElementCount
+    let currentElement = 0
+    setInterval(() => {
+      imageContainer.scrollLeft = imageContainer.clientWidth
+      currentElement++
+      if (currentElement == elementCount) {
+        imageContainer.scrollLeft = 0
+        currentElement = 0
+      }
       
-    })
-    
+    }, timeAout)
+  }
+  
+  async getLongDescription(source) {
+    const response = await fetch(source)
+    return await response.text()
   }
   
 }

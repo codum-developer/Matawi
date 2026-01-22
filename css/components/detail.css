@@ -23,6 +23,6 @@
   background: var(--secondary-color);
 }
 
-.open {
+.details.open {
   grid-template-rows: 60px 1fr;
 }

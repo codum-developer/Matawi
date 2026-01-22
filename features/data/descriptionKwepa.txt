@@ -1,0 +1,37 @@
+Serez-vous de taille face à la furie métallique ?
+<br />
+Plongez dans un défi d'arcade pur et dur où vos réflexes sont votre seule chance de survie. 
+Dans ce jeu de tir 2D frénétique, vous n'êtes pas le chasseur... vous êtes la cible.
+
+<br />
+<br />
+<strong>Le Concept</strong>
+<br />
+<br />
+
+Vous faites face à une unité robotique perfectionnée, programmée avec une seule mission : ne jamais cesser le feu. Armé de munitions infinies, le robot déchaîne un barrage incessant de projectiles sur vous. 
+Votre objectif est simple en apparence, mais redoutable en pratique : survivre le plus longtemps possible.
+Une Difficulté Progressive et Implacable
+Ne vous laissez pas tromper par les premières secondes de jeu. 
+Plus le chronomètre défile, plus l'intelligence artificielle du robot s'intensifie :
+Cadence de tir accrue : Les balles s'enchaînent de plus en plus vite.
+Densité de feu : Le nombre de projectiles par seconde augmente, transformant l'écran en un véritable 'bullet hell'.
+Vitesse des projectiles : La marge de réaction se réduit à mesure que les balles gagnent en vélocité.
+
+<br />
+<br />
+<strong>Pourquoi relever le défi ?</strong>
+<br />
+<br />
+
+<strong>- Gameplay instinctif :</strong> Des contrôles fluides pour une prise en main immédiate.
+<br />
+<strong>- Score infini :</strong> Battez vos propres records et voyez jusqu'où votre concentration peut vous mener.
+<br />
+<strong>- Action pure :</strong> Pas de fioritures, juste une montée d'adrénaline constante.
+<br />
+'Dans ce duel contre la machine, le temps est votre pire ennemi.
+Chaque seconde survécue est une victoire.'
+<br /><br />
+
+<strong></strong>Prêt à esquiver l'impossible ?

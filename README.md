@@ -47,11 +47,11 @@ C'est ici que tu peux t'exercer ! Pour ajouter ta propre fonctionnalité :
     "type": "type de feature (ex: jeux si autre met simplement outils)",
     "action": "si type jeux met ici (jouer) si outil (utiliser),
     "shortDescription": "Une petite description de votre projet",
-    "longDescription": "une description long (facultatif)",
+    "longDescription": "source d'un fichier .txt qui contient la description Long, et il doit être formatée en utilisant de balises HTML<br>(pour la retour à la ligne) et <strong>(pour mettre en gras). le fichier text doit être placer dans /feature/data",
     "src": {
-      "imageSrc": [une liste de différent Source de miniatures],
+      "imageSrc": "[une liste de différent Source des miniatures] tu dois le mettre dans un array (tableau)",
       "articleSrc": "source de la page d'accueil de ton fonctionnalités"
     },
-    "auteur": "votre Nom"
+    "author": "votre Nom"
   }
   

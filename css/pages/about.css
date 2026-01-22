@@ -27,6 +27,7 @@
   border-radius: 50%;
   border: 2px double var(--primary-color);
   margin-bottom: 25px;
+  overflow: hidden;
 }
 
 .project-objectives ul li {
