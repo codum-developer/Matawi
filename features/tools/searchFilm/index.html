@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/features/tools/searchFilm/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <title>Chercheur de film</title>
+  <script src="/features/tools/searchFilm/src/hostApi.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/features/tools/searchFilm/src/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="dot-container"></div>
+  
+  <form class="search">
+    <label for="searchInput">Entrer un titre que tu veux chercher</label>
+    <div class="search-wrapper">
+      <input type="search" name="" id="searchInput">
+      <button type="submit" id="submitButton">Chercher</button>
+    </div>
+  </form>
+  
+  <div class="filtered">
+    <p>Vous pouvez aussi filter votre recherche</p>
+    <div class="allFilters">
+      <div class="filter-year">
+        <label for="year">Année</label>
+        <input type="number" name="y" id="" class="filter-input">
+      </div>
+      
+      <div class="filter-duration">
+        <label for="duration">Durée</label>
+        <select name="plot" id="duration" class="filter-input">
+          <option value="none">sans filtre</option>
+          <option value="short">Court</option>
+          <option value="full">Long</option>
+        </select>
+      </div>
+      
+      <div class="filter-type">
+        <label for="type">Type</label>
+        <select name="type" id="type" class="filter-input">
+          <option value="none">sans filtre</option>
+          <option value="movie">Film</option>
+          <option value="series">série</option>
+          <option value="episode">Episode</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  
+  <p class="resultLen">Voici les résultats de recherche: <span id="resultLen"></span> résultat(s)</p>
+  <div class="result">
+    <p style="position: absolute; inset: 50% 25%; margin: auto; font-size: 1.1rem; text-align: center; ">Les résultats seront affichés ici</p>
+  </div>
+  
+  <div class="skip-age">
+    <button name="prevButton">prev</button>
+    <button name="nextButton">next</button>
+  </div>
+  
+  <div class="go-up"><i class="fas fa-arrow-up"></i></div>
+  
+  <script src="/features/tools/searchFilm/src/dom.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

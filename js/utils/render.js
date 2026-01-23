@@ -1,5 +1,7 @@
 import Dom from '/js/utils/dom.js';
+import LoadData from '/js/utils/loadData.js';
 const myDom = new Dom()
+const loader = new LoadData()
 
 export default class Rander {
   constructor() {
@@ -182,12 +184,9 @@ export default class Rander {
   }
   
   async randerModal(article) {
-    if (article.longDescription != "") {
-      const description = await myDom.getLongDescription(article.longDescription)
-      article.longDescription = description
-    }
     
-    const longDescription = article.longDescription == "" ? article.shortDescription : article.longDescription
+    
+    const longDescription = article.longDescription == "" ? article.shortDescription : await loader.getLongDescription(article.longDescription)
     
     const modalContent = `
         <div class="modal flex center d-column p-20">
@@ -240,6 +239,7 @@ export default class Rander {
     document.querySelector(".close-modal").addEventListener("click", (e) => {
       e.preventDefault()
       modalWrap.classList.remove("visible")
+      clearInterval(myDom.carouselId)
       setTimeout(() => {
         this.body.removeChild(modalWrap)
       }, 100)

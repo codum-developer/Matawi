@@ -1,6 +1,7 @@
 export default class LoadData {
   constructor(dataSrc) {
     this.src = dataSrc;
+    this.map = new Map()
   }
   
   // On sépare la logique de chargement
@@ -38,4 +39,40 @@ export default class LoadData {
       return matchKeyWord && matchType; // L'article doit valider les deux conditions
     });
   }
+  
+  async getLongDescription(source) {
+    try {
+      if (!this.map.has(source)) {
+        const response = await fetch(source)
+        if (!response.ok) {
+          throw new Error("mauvaise réponse")
+        }
+        const content = await response.text()
+        this.setMap(source, content)
+        return content
+      } else {
+        return this.getInMap(source)
+      }
+      
+    } catch (e) {
+      console.log(e)
+    }
+    
+  }
+  
+  setMap(key, value) {
+    if (!this.map.has(key)) {
+      this.map.set(key, value)
+      
+    } else {
+      return
+    }
+    
+  }
+  
+  getInMap(key) {
+    const data = this.map.get(key)
+    return data
+  }
+  
 }

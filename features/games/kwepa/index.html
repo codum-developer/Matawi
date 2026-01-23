@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Robot Touch</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="controls">
+            <button id="btn-avancer" class="btn">Avancer</button>
+            <button id="btn-arreter" class="btn">Arrêter</button>
+        </div>
+        
+        <div class="canvas-wrapper">
+            <canvas id="game-canvas">
+                Votre navigateur ne supporte pas Canvas
+            </canvas>
+        </div>
+        
+        <div class="instructions">
+            <p>👆 Touchez l'écran pour déplacer la cible</p>
+            <p>🎯 Évitez les balles et survivez !</p>
+        </div>
+    </div>
+
+    <!-- Modules JavaScript -->
+    <script src="./src/SoundManager.js" type="module"></script>
+    <script src="./src/Game.js" type="module"></script>
+    <script src="./src/main.js" type="module"></script>
+</body>
+</html>

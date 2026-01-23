@@ -26,7 +26,7 @@ export default class Dom {
   }
   
   customeMarkupDetail() {
-    const detail = document.querySelector(".datail")
+    const detail = document.querySelector(".detail")
     const summary = document.querySelector(".summary")
     if (detail && summary) {
       summary.addEventListener("click", () => {
@@ -45,21 +45,18 @@ export default class Dom {
   
   carousel(imageContainer, timeAout = 3000) {
     const elementCount = imageContainer.childElementCount
-    let currentElement = 0
-    setInterval(() => {
-      imageContainer.scrollLeft = imageContainer.clientWidth
-      currentElement++
+    let currentElement = 0;
+    
+    this.carouselId = setInterval(() => {
+      imageContainer.scrollLeft = imageContainer.clientWidth * currentElement
       if (currentElement == elementCount) {
         imageContainer.scrollLeft = 0
         currentElement = 0
       }
-      
+      currentElement++
     }, timeAout)
   }
   
-  async getLongDescription(source) {
-    const response = await fetch(source)
-    return await response.text()
-  }
+  
   
 }

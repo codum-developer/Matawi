@@ -1,9 +1,8 @@
-.datail {
+.detail {
+  display: grid;
   background: transparent;
   overflow: hidden;
-  border-radius: 10px;
   transition: all .7s ease;
-  display: grid;
   grid-template-rows: 60px 0fr;
   
 }
@@ -23,6 +22,6 @@
   background: var(--secondary-color);
 }
 
-.details.open {
+.open {
   grid-template-rows: 60px 1fr;
 }
