@@ -45,16 +45,55 @@ export default class Dom {
   
   carousel(imageContainer, timeAout = 3000) {
     const elementCount = imageContainer.childElementCount
-    let currentElement = 0;
+    imageContainer.style.anchorName = '--anchor-marker';
+    const markerGroup = document.createElement("div")
+    markerGroup.classList.add("markerGroup")
     
+    for (let i = 1; i < elementCount + 1; i++) {
+      let marker = document.createElement("span")
+      marker.classList.add("marker")
+      markerGroup.appendChild(marker)
+    }
+    
+    imageContainer.appendChild(markerGroup)
+    
+    
+    let currentElement = 0;
+    let currentMarker = 0;
+    const markers = imageContainer.querySelectorAll(".marker")
+    markers.forEach((marker, index, array) => {
+      marker.addEventListener("click", () => {
+        removeActiveClass(array)
+        marker.classList.add("active")
+        imageContainer.scrollLeft = imageContainer.clientWidth * index
+        
+      })
+    })
+    
+    markers[0].classList.add("active")
     this.carouselId = setInterval(() => {
       imageContainer.scrollLeft = imageContainer.clientWidth * currentElement
+      removeActiveClass(markers)
+      markers[currentMarker].classList.add("active")
+      
       if (currentElement == elementCount) {
         imageContainer.scrollLeft = 0
         currentElement = 0
       }
+      
       currentElement++
+      currentMarker++
+      if (currentMarker == markers.length) {
+        currentMarker = 0
+      }
     }, timeAout)
+    
+    const removeActiveClass = (elementList) => {
+      elementList.forEach(element => {
+        element.classList.contains("active") ? element.classList.remove("active") : null
+      })
+    }
+    
   }
   
   

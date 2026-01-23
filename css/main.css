@@ -23,4 +23,28 @@ body {
 }
 
 
+.markerGroup{
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  position-anchor: --anchor-marker;
+  bottom: anchor(--anchor-marker bottom);
+  left: anchor(--anchor-marker center);
+  background-color: none;
+  position: absolute;
+}
 
+.marker{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin-left: 5px;
+  display: inline;
+  transition: all ease 1s;
+}
+.marker.active{
+  width: 12px;
+  height: 12px;
+  background-color: var(--secondary-color);
+}
